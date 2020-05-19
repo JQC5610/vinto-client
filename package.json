@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@carbon/icons-react": "^10.10.2",
+    "carbon-components": "^10.11.2",
+    "carbon-components-react": "^7.11.3",
+    "node-sass": "^4.14.1"
+  }
+}
