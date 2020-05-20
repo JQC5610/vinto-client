@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ModalVinto from './ModalVinto';
+import PostForm from './PostForm';
 // import TriggerButton from './TriggerButton';
 
 
@@ -9,7 +9,7 @@ class PostContainer extends Component {
     render(){
         return(
             <React.Fragment>
-                <ModalVinto users={this.props.users} addPost={this.addPost}/>
+                <PostForm users={this.props.users} addPost={this.props.addPost}/>
             </React.Fragment>
         );
     }

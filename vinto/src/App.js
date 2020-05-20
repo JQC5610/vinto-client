@@ -13,9 +13,18 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3001/users')
-    .then(res => res.json())
-    .then(data => this.setState({ users: data }))
+    const fetchUsers = () => {
+      fetch('http://localhost:3001/users')
+      .then(resp => resp.json())
+      .then(data => this.setState({ users: data })) 
+    }
+    const fetchPosts = () => {
+      fetch('http://localhost:3001/posts')
+      .then(resp => resp.json())
+      .then(data => this.setState({ posts: data }))
+    }
+    fetchUsers()
+    fetchPosts()
   }
 
   addPost = post => {
@@ -23,6 +32,7 @@ class App extends Component {
   }
 
   render(){
+    console.log(this.state)
     return (
       <div className="App">
         <HeaderVinto />
